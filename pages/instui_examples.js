@@ -1,4 +1,5 @@
 import React from 'react'
+import dynamic from 'next/dynamic'
 import {InPlaceEdit, Editable} from '@instructure/ui-editable'
 import { Modal } from '@instructure/ui-modal'
 import {Overlay, Mask} from '@instructure/ui-overlays'
@@ -62,6 +63,10 @@ import {Tray} from '@instructure/ui-tray'
 import {Selectable} from '@instructure/ui-selectable'
 import NavExample from './nav'
 import CalExample from './calendar'
+
+const CodeEditorExample = dynamic(() => {
+  return import('./code_editor_example')
+}, {ssr: false})
 class EditableExample extends React.Component {
 
   constructor (props) {
@@ -1315,6 +1320,7 @@ export const ExampleRenderer = () => {
       <InplaceEditExample />
       <FormFieldExample />
       <EditableExample />
+      <CodeEditorExample />
     </>
   )
 }

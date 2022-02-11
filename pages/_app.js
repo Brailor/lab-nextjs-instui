@@ -14,8 +14,8 @@ export default function MyApp(props) {
       <Head>
         <meta name="viewport" content="initial-scale=1, width=device-width" />
       </Head>
-      <InstUISettingsProvider theme={canvas}>
-        <Component {...pageProps} />
+      <InstUISettingsProvider theme={canvas} instanceCounterMap={defaultContextVal}> 
+       <Component {...pageProps} />
       </InstUISettingsProvider>
     </>
   );

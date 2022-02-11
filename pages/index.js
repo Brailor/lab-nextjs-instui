@@ -1,5 +1,5 @@
 import React from 'react';
-import {ExampleRenderer} from'./nextjsrender'
+import {ExampleRenderer} from'./instui_examples'
 
 const App = () => {
   return (
